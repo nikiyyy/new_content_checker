@@ -1,0 +1,3 @@
+{"name":"nexus armours","url":"https://www.nexusmods.com/skyrimspecialedition/mods/categories/54/","img_selector":".fore::attr(src)","container_selector":".mod-tile"}
+{"name":"testing armours","url":"https://www.nexusmods.com/oblivion/mods/categories/61/","img_selector":".fore::attr(src)","container_selector":".mod-tile"}
+{"name":"moddb","url":"https://www.moddb.com/mods/top","img_selector":".rowcontent .image ::attr(src)","container_selector":".rowcontent"}
