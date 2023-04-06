@@ -5,8 +5,7 @@
 
 import scrapy
 
-
 class NewContentCheckerItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+    img = scrapy.Field()
+    last_post_url = scrapy.Field()
+    cur_page_url = scrapy.Field()
