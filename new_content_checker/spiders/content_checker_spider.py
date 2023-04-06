@@ -1,17 +1,25 @@
+import json
 import scrapy
-from ..items import NewContentCheckerItem
+
+def file_reader(caller):
+    with open('content.txt') as f:
+        datafile = [json.loads(line) for line in f.readlines()]
+
+    if caller == "url":
+        return [i['url'] for i in datafile]
+    return datafile
 
 
 class CrawlSpider(scrapy.Spider):
-    name = "nexusmods"
-    allowed_domains = ["www.nexusmods.com"]
-    start_urls = ["https://www.nexusmods.com/skyrimspecialedition/mods/categories/54/"]
-
-    listings_css = [".tile-name a::attr(href)"]
+    name = "content_checker"
+    start_urls = file_reader("url")
 
     def parse(self, response):
+        for site in file_reader(None):
+            if site['url'] == response.url:
+                img_selector = site['img_selector']
+                container_selector = site['container_selector']
+                break
 
-        for product in response.css('.mod-tile'):
-            yield {
-                'brand' : 'test'
-            }
+        product = response.css(container_selector)[0]
+        yield {product.css(img_selector).get() : response.url}
