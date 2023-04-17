@@ -5,5 +5,8 @@ img {
   text-align: center;
   margin: auto;
   box-sizing: border-box;
+}
 
+.new {
+  border: 5px solid green;
 }
