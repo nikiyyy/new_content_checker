@@ -2,6 +2,8 @@
 2. apply custom settings depending on site
 3. add different website sections
 4. use a database instead of a txt file
+5. number of succesful crawls and status codes number that isplays the number of sites
+6. bash script to use on startup
 
 Optional 
 1. use react for html page
