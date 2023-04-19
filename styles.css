@@ -1,3 +1,8 @@
+body{
+    background: rgb(255,251,0);
+    background: linear-gradient(90deg, rgba(174,117,170,1) 0%, rgba(81,153,255,1) 60%, rgba(48,242,255,1) 100%);
+}
+
 img {
   width: 16%;
   height:25%;
@@ -8,5 +13,6 @@ img {
 }
 
 .new {
-  border: 5px solid green;
+  padding: 0;
+  border: 15px solid green;
 }
